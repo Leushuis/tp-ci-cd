@@ -42,3 +42,4 @@ Médiane de 5 requêtes.
 | 0 | Image de départ | 1.88 GB | 8.4 s | 2.4 ms | 2.0 ms | `maybe-big-file.txt` est absent. |
 | 1 | Reformatage de `server.js` et `package.json` | 1.88 GB | 9.0 s | 2.0 ms | 2.1 ms | Indentation seulement. Taille inchangée. |
 | 2 | Ajout de `maybe-big-file.txt` (2 MB) | 1.89 GB | 8.9 s | 1.7 ms | 5.7 ms | `/big` lit et renvoie le fichier. `GET /` ne change pas. |
+| 3 | Retrait de l'inutile | 1.80 GB | 2.6 s | 1.6 ms | 8.3 ms | Plus d'`apt-get`, de build factice, de ports 4000/5000, de `mongodb`, du middleware de log, ni de `node_modules` copiés. `nodemon` reste en devDependency, absent de l'image. |
