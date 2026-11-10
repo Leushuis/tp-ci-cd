@@ -40,3 +40,4 @@ Médiane de 5 requêtes.
 | Étape | Modification | Taille | Build | GET / | GET /big | Commentaire |
 | --- | --- | --- | --- | --- | --- | --- |
 | 0 | Image de départ | 1.88 GB | 8.4 s | 2.4 ms | 2.0 ms | `maybe-big-file.txt` est absent. |
+| 1 | Reformatage de `server.js` et `package.json` | 1.88 GB | 9.0 s | 2.0 ms | 2.1 ms | Indentation seulement. Taille inchangée, écarts de temps dans le bruit de mesure. |
