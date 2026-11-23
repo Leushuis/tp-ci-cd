@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zombie
+spec:
+  containers:
+    - name: app
+      image: busybox:1.36
+      args: ["sh", "-c", "touch /tmp/healthy; sleep 30; rm /tmp/healthy; sleep 600"]
+      livenessProbe:
+        exec: { command: ["cat", "/tmp/healthy"] }
+        initialDelaySeconds: 5
+        periodSeconds: 5
